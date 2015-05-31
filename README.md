@@ -4,15 +4,15 @@ You can now place all your items in a relative layout, and use this library to m
 # Exemples
 
 Photshop image without grid, designed with 4 buttons.
-![alt tag](/without_grid.png)
+![alt tag](https://raw.githubusercontent.com/HusseinTaha/grid-android-designer/master/without_grid.png)
 
 same photoshop image with grid units, each grid unit is 5% of screen size, for exemple button "test" has 3.1 GRID units from left, and 3.5 GRID units from top, same for all buttons.
 
-![alt tag](/with_grid.png)
+![alt tag](https://raw.githubusercontent.com/HusseinTaha/grid-android-designer/master/with_grid.png)
 
 then when using grid-android-designer, just drop all your views in one relative layout, and the magic will show!
 
-![alt tag](/device.png)
+![alt tag](https://raw.githubusercontent.com/HusseinTaha/grid-android-designer/master/device.png)
 
 # Methods to use
   ```setWithTitleBar``` set if with or without status bar.<br/>
