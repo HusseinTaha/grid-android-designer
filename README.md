@@ -1,5 +1,5 @@
 # grid-android-designer
-you can now place all your items in a relative layout, and use this library to manage and design your items from code.
+You can now place all your items in a relative layout, and use this library to manage and design your items from code.
 
 # Exemples
 
@@ -27,7 +27,7 @@ then when using grid-android-designer, just drop all your views in one relative 
   
 
 # How to use
-just extend Screen class from grid-android-designer, and override the ```onLayoutCreate``` method.
+Just extend Screen class from grid-android-designer, and override the ```onLayoutCreate``` method.
 In ```onLayoutCreate```, you can change size, and adjust layouts.
 
     @Override
@@ -52,4 +52,4 @@ In ```onLayoutCreate```, you can change size, and adjust layouts.
     }
 
 # Contribution
-please don't hesitate to collaborate and upgrade this library. Fork, and send pull requests.
+Please don't hesitate to collaborate and upgrade this library. Fork, and send pull requests.
