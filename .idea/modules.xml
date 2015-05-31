@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/GridDesigner.iml" filepath="$PROJECT_DIR$/GridDesigner.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/grid-android-designer/grid-android-designer.iml" filepath="$PROJECT_DIR$/grid-android-designer/grid-android-designer.iml" />
     </modules>
   </component>
 </project>
