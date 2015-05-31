@@ -34,11 +34,15 @@ public class MainActivity extends Screen {
     public void onLayoutCreate() {
         super.onLayoutCreate();
 
-        setViewWidthHeight(R.id.button2, 4, 1.5f);
-        setViewWidthHeight(R.id.button3, 4, 1.5f);
-        setViewWidthHeight(R.id.button4, 4, 1.5f);
+        setViewWidthHeight(R.id.button1, 3.9f, 1.4f);
+        setViewWidthHeight(R.id.button2, 3.9f, 1.4f);
+        setViewWidthHeight(R.id.button3, 3.9f, 1.4f);
+        setViewWidthHeight(R.id.button4, 3.9f, 1.4f);
 
+        setTextSize(R.id.button1, SP * 0.6f);
         setTextSize(R.id.button2, SP * 0.6f);
+        setTextSize(R.id.button3, SP * 0.6f);
+        setTextSize(R.id.button4, SP * 0.6f);
 
         leftTop(R.id.button1, 3.0f, 3.5f);
         topRight(R.id.button2, 5.75f, 1.6f);

@@ -15,24 +15,30 @@ import com.androidquery.AQuery;
 
 /**
  * Created by husseintaha on 5/31/15.
+ * Screen class is an activity class to make the user interface layouts more realible and easy to manage.
  */
 public abstract class Screen extends FragmentActivity {
 
-    //Grid unit is equal to 50 px.
-    //you can change this value,
+    //percent value every grid unit is about 5% from screen, should be the same as the photoshop grid images
     private final float percent = 0.05f;
+    //sp unit for the texts.
     public float SP;
+    // Grid units for height and width.
     private float HGRID, WGRID;
+    //screen width and height
     private int screenWidth, screenHeight;
+    //not user for now, number of horizontal grid units and vertical.
     private float nHGrids = 0, nVGrids = 0;
+    //scaled density of the display screen.
     private float scaledDensity;
+    //the android query for the view
     private AQuery ajax;
+    //if the status bar is hidden or not.
     private Boolean withTitleBar = true;
 
     @Override
     public void onCreate(Bundle savedInstanceState, PersistableBundle persistentState) {
         super.onCreate(savedInstanceState, persistentState);
-
     }
 
 
@@ -45,6 +51,12 @@ public abstract class Screen extends FragmentActivity {
         onLayoutCreate();
     }
 
+
+    /**
+     * set with title bar or not
+     *
+     * @param b value for status bar
+     */
     public void setWithTitleBar(Boolean b) {
         withTitleBar = b;
     }
@@ -80,10 +92,21 @@ public abstract class Screen extends FragmentActivity {
         SP = WGRID / scaledDensity;
     }
 
+
+    /**
+     *
+     * should override this method to set views layouts.
+     */
     public void onLayoutCreate() {
     }
 
 
+    /**
+     * set textSize for the views containing text.
+     *
+     * @param resId --> resource id for the view
+     * @param size --> text size in function of SP units
+     */
     public void setTextSize(int resId, float size) {
         AQuery a = ajax.id(resId);
         if (a != null && a.getView() != null && a.getView() instanceof TextView) {
@@ -96,6 +119,12 @@ public abstract class Screen extends FragmentActivity {
         v.getLayoutParams().height = height;
     }
 
+
+    /**
+     * @param resId --> resource id for the view
+     * @param width --> width of the view in number of grid units
+     * @param height --> height of the view in number of grid units
+     */
     public void setViewWidthHeight(int resId, float width, float height) {
         AQuery a = ajax.id(resId);
         width *= WGRID;
@@ -119,6 +148,15 @@ public abstract class Screen extends FragmentActivity {
         }
     }
 
+
+    /**
+     * set view margins.
+     * @param resId --> resource id for the view
+     * @param left --> margin left of the view in number of grid units
+     * @param top --> margin top of the view in number of grid units
+     * @param right --> margin right of the view in number of grid units
+     * @param bottom --> margin bottom of the view in number of grid units
+     */
     public void setMargin(int resId, float left, float top, float right, float bottom) {
         top *= HGRID;
         right *= WGRID;
@@ -134,6 +172,12 @@ public abstract class Screen extends FragmentActivity {
         }
     }
 
+    /**
+     * set view top and right margins
+     * @param resId --> resource id for the view
+     * @param top --> margin top of the view in number of grid units
+     * @param right --> margin right of the view in number of grid units
+     */
     public void topRight(int resId, float top, float right) {
         top *= HGRID;
         right *= WGRID;
@@ -148,6 +192,12 @@ public abstract class Screen extends FragmentActivity {
 
     }
 
+    /**
+     * set view right and bottom margins
+     * @param resId --> resource id for the view
+     * @param right --> margin right of the view in number of grid units
+     * @param bottom --> margin bottom of the view in number of grid units
+     */
     public void rightBottom(int resId, float right, float bottom) {
         right *= WGRID;
         bottom *= HGRID;
@@ -162,6 +212,12 @@ public abstract class Screen extends FragmentActivity {
 
     }
 
+    /**
+     * set view left and top margins
+     * @param resId --> resource id for the view
+     * @param left --> margin left of the view in number of grid units
+     * @param top --> margin top of the view in number of grid units
+     */
     public void leftTop(int resId, float left, float top) {
         top *= HGRID;
         left *= WGRID;
@@ -174,6 +230,12 @@ public abstract class Screen extends FragmentActivity {
 
     }
 
+    /**
+     * set view left and bottom margins
+     * @param resId --> resource id for the view
+     * @param left --> margin left of the view in number of grid units
+     * @param bottom --> margin bottom of the view in number of grid units
+     */
     public void leftBottom(int resId, float left, float bottom) {
         bottom *= HGRID;
         left *= WGRID;
