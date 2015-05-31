@@ -50,3 +50,6 @@ In ```onLayoutCreate```, you can change size, and adjust layouts.
         leftBottom(R.id.button3, 7.1f, 1.2f);
         rightBottom(R.id.button4, 2.5f, 0.5f);
     }
+
+# Contribution
+please don't hesitate to collaborate and upgrade this library. Fork, and send pull requests.
