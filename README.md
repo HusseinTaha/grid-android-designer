@@ -1,7 +1,7 @@
 # grid-android-designer
 You can now place all your items in a relative layout, and use this library to manage and design your items from code.
 
-# Exemples
+# Examples
 
 Photshop image without grid, designed with 4 buttons.
 ![alt tag](https://raw.githubusercontent.com/HusseinTaha/grid-android-designer/master/without_grid.png)
